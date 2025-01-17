@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Verificador de Fibonacci</title>
+    <style>
+      body {
+        font-family: Arial, sans-serif;
+        text-align: center;
+        margin-top: 50px;
+      }
+      input,
+      button {
+        padding: 10px;
+        font-size: 16px;
+        margin: 5px;
+      }
+      #resultado {
+        margin-top: 20px;
+        font-weight: bold;
+      }
+    </style>
+  </head>
+  <body>
+    <h1>Verificador de Sequência de Fibonacci</h1>
+    <input
+      type="number"
+      id="numeroInput"
+      placeholder="Digite um número"
+      required
+    />
+    <button id="btnVerificar">Verificar</button>
+    <p id="resultado"></p>
+
+    <script>
+      document
+        .getElementById("btnVerificar")
+        .addEventListener("click", function () {
+          const numero = parseInt(document.getElementById("numeroInput").value);
+          const resultado = document.getElementById("resultado");
+
+          if (isNaN(numero) || numero < 0) {
+            resultado.textContent =
+              "Por favor, insira um número inteiro não negativo.";
+            return;
+          }
+
+          let a = 0,
+            b = 1;
+
+          while (b < numero) {
+            [a, b] = [b, a + b];
+          }
+
+          if (b === numero || numero === 0) {
+            resultado.textContent = `O número ${numero} pertence à sequência de Fibonacci.`;
+          } else {
+            resultado.textContent = `O número ${numero} NÃO pertence à sequência de Fibonacci.`;
+          }
+        });
+    </script>
+  </body>
+</html>

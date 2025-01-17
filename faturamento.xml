@@ -1,0 +1,24 @@
+<faturamento>
+  <estados>
+    <estado>
+      <nome>SP</nome>
+      <faturamento>67836.43</faturamento>
+    </estado>
+    <estado>
+      <nome>RJ</nome>
+      <faturamento>36678.66</faturamento>
+    </estado>
+    <estado>
+      <nome>MG</nome>
+      <faturamento>29229.88</faturamento>
+    </estado>
+    <estado>
+      <nome>ES</nome>
+      <faturamento>27165.48</faturamento>
+    </estado>
+    <estado>
+      <nome>Outros</nome>
+      <faturamento>19849.53</faturamento>
+    </estado>
+  </estados>
+</faturamento>

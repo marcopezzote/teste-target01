@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Inverter String</title>
+    <style>
+      body {
+        font-family: Arial, sans-serif;
+        margin: 20px;
+        padding: 20px;
+      }
+      input,
+      button {
+        padding: 10px;
+        font-size: 16px;
+      }
+      p {
+        font-size: 18px;
+      }
+    </style>
+  </head>
+  <body>
+    <h1>Inverter String</h1>
+    <label for="inputString">Digite a string para inverter:</label>
+    <input type="text" id="inputString" placeholder="Digite sua string aqui" />
+    <button onclick="inverterString()">Inverter</button>
+
+    <p id="resultado"></p>
+
+    <script>
+      function inverterString() {
+        const inputString = document.getElementById("inputString").value;
+        let resultado = "";
+
+        for (let i = inputString.length - 1; i >= 0; i--) {
+          resultado += inputString.charAt(i);
+        }
+
+        document.getElementById("resultado").innerText =
+          "String invertida: " + resultado;
+      }
+    </script>
+  </body>
+</html>
